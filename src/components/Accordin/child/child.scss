@@ -1,0 +1,100 @@
+.child {
+  margin-bottom: 0.1rem;
+  &:nth-child(2) :nth-child(1) :first-child svg {
+    fill: #264de4;
+  }
+  &:nth-child(3) :nth-child(1) :first-child svg {
+    fill: #f0db4f;
+  }
+  &:nth-child(4) :nth-child(1) :first-child svg {
+    fill: #00d8ff;
+  }
+  &:nth-child(5) :nth-child(1) :first-child svg {
+    fill: #42b883;
+  }
+  .question {
+    background-color: #0c88ee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px 1px #080606;
+    .left {
+      display: flex;
+      align-items: center;
+      li {
+        list-style-type: none;
+        width: 50px;
+        height: 50px;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          font-size: 2rem;
+          fill: #e34c26;
+        }
+      }
+      h1 {
+        font-size: 1.2rem;
+        color: #fff;
+        letter-spacing: 0.1rem;
+        margin-left: 1rem;
+      }
+    }
+    .right {
+      svg {
+        font-size: 1.7rem;
+        color: #fff;
+        margin-right: 1rem;
+        transition: transform 0.5s;
+        &.active {
+          transform: rotate(180deg);
+          fill: chocolate;
+        }
+      }
+    }
+  }
+  .answer {
+    padding: 0rem;
+    height: 0px;
+    opacity: 0;
+    overflow-y: scroll;
+    position: relative;
+    transition: height 0.5s;
+    position: relative;
+    &.active {
+      padding: 0.5rem;
+      height: 200px;
+      opacity: 1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 100vh;
+      background-color: #0c88ee;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      padding: 0.5rem 1rem;
+    }
+  }
+  ::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+    background: #6e6868;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px 1px #000;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #df4305;
+    border-radius: 20px;
+  }
+}
